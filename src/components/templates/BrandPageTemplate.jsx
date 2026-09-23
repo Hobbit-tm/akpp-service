@@ -146,7 +146,7 @@ export default function BrandPageTemplate({
               to="/remont-cvt"
               className="rounded-full bg-slate-100 px-5 py-3"
             >
-              Ремонт CVT
+              Ремонт CVT.
             </Link>
           </div>
         </div>
