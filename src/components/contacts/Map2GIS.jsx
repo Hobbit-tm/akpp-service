@@ -13,53 +13,6 @@ const icon = new L.Icon({
 });
 
 export default function Map2GIS() {
-  // const mapNodeRef = useRef(null);
-  // const mapInstanceRef = useRef(null);
-
-  // useEffect(() => {
-  //   let cancelled = false;
-
-  //   async function initMap() {
-  //     try {
-  //       if (!mapNodeRef.current) return;
-
-  //       const key = import.meta.env.VITE_2GIS_KEY;
-
-  //       if (!key) {
-  //         console.error("2GIS key is missing");
-  //         return;
-  //       }
-
-  //       const mapgl = await load();
-
-  //       if (cancelled) return;
-
-  //       mapInstanceRef.current = new mapgl.Map(mapNodeRef.current, {
-  //         key,
-  //         center: [76.839419, 43.198872],
-  //         zoom: 17,
-  //       });
-
-  //       new mapgl.Marker(mapInstanceRef.current, {
-  //         coordinates: [76.839419, 43.198872],
-  //       });
-  //     } catch (e) {
-  //       console.error(e);
-  //     }
-  //   }
-
-  //   initMap();
-
-  //   return () => {
-  //     cancelled = true;
-
-  //     if (mapInstanceRef.current) {
-  //       mapInstanceRef.current.destroy();
-  //       mapInstanceRef.current = null;
-  //     }
-  //   };
-  // }, []);
-
   return (
     <section className="relative overflow-hidden bg-slate-950 py-28">
       {/* Красное свечение */}

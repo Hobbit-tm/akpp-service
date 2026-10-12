@@ -5,6 +5,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminPanel from "./pages/AdminPanel";
 import ProtectedRoute from "./components/ProtectedRoute";
 import TransmissionPage from "./pages/TransmissionPage";
+import NotFound from "./pages/NotFound";
 
 import BrandPage from "./pages/BrandPage";
 
@@ -26,7 +27,7 @@ export default function App() {
         }
       />
 
-      <Route path="*" element={<PublicSite />} />
+      <Route path="*" element={<NotFound />} />
 
       <Route
         path="/transmission/:transmission"
