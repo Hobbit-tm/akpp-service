@@ -17,7 +17,7 @@ export default function RelatedBrands({ currentBrand }) {
           >
             <h3 className="font-bold">Ремонт АКПП {brand.brand}</h3>
 
-            <p className="mt-2 text-slate-600">{brand.description}</p>
+            <p className="mt-2 text-slate-300">{brand.description}</p>
           </Link>
         ))}
       </div>

@@ -12,7 +12,7 @@ export function createAutoRepairSchema({
 
     description,
 
-    image: "https://akpp-service.kz/logo.png",
+    image: "https://remont-akpp.kz/logo.png",
 
     url,
 

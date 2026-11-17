@@ -20,7 +20,7 @@ export default function TransmissionsPage() {
 
       <Header />
 
-      <main className="mx-auto max-w-7xl px-4 py-20">
+      <main className="mx-auto max-w-7xl px-4 pt-32 pb-20">
         <h1 className="text-5xl font-black">Каталог коробок передач</h1>
 
         {Object.entries(groups).map(([type, list]) => (
@@ -36,7 +36,7 @@ export default function TransmissionsPage() {
                 >
                   <h3 className="text-2xl font-bold">{item.name}</h3>
 
-                  <p className="mt-2 text-slate-600">{item.description}</p>
+                  <p className="mt-2 text-slate-300">{item.description}</p>
                 </Link>
               ))}
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "../../assets/hero/hero.jpg";
+import heroImage from "../../assets/hero/hero.webp";
 import { BadgeCheck } from "lucide-react";
 
 import HeroButtons from "./HeroButtons";

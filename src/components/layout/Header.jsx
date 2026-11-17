@@ -20,7 +20,6 @@ const menu = [
   { title: "О нас", section: "about" },
   { title: "Отзывы", section: "reviews" },
 
-  { title: "Блог", href: "/blog" },
 
   { title: "Контакты", section: "contacts" },
 ];
@@ -112,7 +111,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop menu */}
-            <nav className="hidden items-center justify-center gap-12 lg:flex">
+            <nav className="hidden items-center justify-center gap-6 whitespace-nowrap lg:flex 2xl:gap-12">
               {menu.map((item) =>
                 item.submenu ? (
                   <div key={item.title} className="group relative">

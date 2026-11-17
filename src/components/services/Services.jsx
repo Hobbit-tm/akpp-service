@@ -30,7 +30,7 @@ export default function Services() {
           </div>
 
           <a
-            href="/services"
+            href="/remont-akpp"
             className="group inline-flex items-center gap-2 font-semibold text-red-400 transition-all hover:gap-3"
           >
             Смотреть все услуги
@@ -86,7 +86,7 @@ export default function Services() {
 
               {/* Кнопка */}
               <a
-                href="/services"
+                href="/remont-akpp"
                 className="mt-6 inline-flex items-center gap-2 font-semibold text-red-600 transition-all hover:gap-3"
               >
                 Подробнее

@@ -7,7 +7,7 @@ import Prices from "../components/prices/Prices";
 import Reviews from "../components/reviews/Reviews";
 import ContactSection from "../components/contacts/ContactSection";
 import FloatingButtons from "../components/layout/FloatingButtons";
-import Map2GIS from "../components/contacts/Map2GIS";
+import MapClient from "../components/contacts/MapClient";
 import Footer from "../components/layout/Footer";
 import FAQ from "../components/faq/FAQ";
 import SeoContent from "../components/SeoContent";
@@ -28,7 +28,7 @@ export default function PublicSite() {
       <SeoContent />
 
       <ContactSection />
-      <Map2GIS />
+      <MapClient />
 
       <FloatingButtons />
       <Footer />

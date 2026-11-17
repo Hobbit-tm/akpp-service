@@ -33,11 +33,11 @@ export default function Faq() {
           FAQ
         </span>
 
-        <h2 className="mt-4 text-4xl font-black text-slate-900">
+        <h2 className="mt-4 text-4xl font-black text-white">
           Часто задаваемые вопросы
         </h2>
 
-        <p className="mt-4 text-lg text-slate-600">
+        <p className="mt-4 text-lg text-slate-300">
           Ответы на популярные вопросы по ремонту АКПП, DSG и вариаторов.
         </p>
       </div>
@@ -46,13 +46,13 @@ export default function Faq() {
         {faqItems.map((item, index) => (
           <div
             key={index}
-            className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+            className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70 shadow-sm"
           >
             <button
               onClick={() => setOpen(open === index ? null : index)}
               className="flex w-full items-center justify-between p-6 text-left"
             >
-              <span className="text-lg font-bold text-slate-900">
+              <span className="text-lg font-bold text-white">
                 {item.question}
               </span>
 
@@ -64,7 +64,7 @@ export default function Faq() {
             </button>
 
             {open === index && (
-              <div className="border-t border-slate-100 px-6 py-5 text-slate-600">
+              <div className="border-t border-slate-100 px-6 py-5 text-slate-300">
                 {item.answer}
               </div>
             )}
