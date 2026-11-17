@@ -26,6 +26,7 @@ const menu = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -221,82 +222,106 @@ export default function Header() {
 
         {/* Mobile menu */}
         <div
-          className={`overflow-hidden transition-all duration-300 lg:hidden ${
-            open ? "mt-3 max-h-[700px]" : "max-h-0"
+          className={`grid transition-[grid-template-rows,opacity] duration-300 lg:hidden ${
+            open ? "mt-3 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
           }`}
         >
-          <div className="rounded-2xl border border-white/10 bg-slate-950/95 p-6 backdrop-blur-xl">
-            <nav className="flex flex-col gap-5">
-              {menu.map((item) =>
-                item.submenu ? (
-                  <div key={item.title}>
-                    <div className="mb-3 font-semibold text-white">
-                      {item.title}
-                    </div>
+          <div className="overflow-hidden">
+            <nav className="rounded-2xl border border-white/10 bg-slate-950/95 p-3 backdrop-blur-xl">
+              <div className="grid grid-cols-2 gap-2">
+                {menu.map((item) => {
+                  const tile =
+                    "flex items-center justify-between rounded-xl bg-white/5 px-4 py-3 text-sm font-medium text-white transition hover:bg-white/10";
 
-                    <div className="ml-4 flex flex-col gap-3">
-                      {item.submenu.map((sub) => (
+                  if (item.submenu) {
+                    return (
+                      <button
+                        key={item.title}
+                        onClick={() => setServicesOpen(!servicesOpen)}
+                        className={`${tile} col-span-2`}
+                        aria-expanded={servicesOpen}
+                      >
+                        {item.title}
+                        <ChevronDown
+                          size={16}
+                          className={`transition-transform duration-300 ${
+                            servicesOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                    );
+                  }
+
+                  if (item.section) {
+                    return (
+                      <button
+                        key={item.title}
+                        onClick={() => {
+                          scrollToSection(item.section);
+                          setOpen(false);
+                        }}
+                        className={tile}
+                      >
+                        {item.title}
+                      </button>
+                    );
+                  }
+
+                  return (
+                    <NavLink
+                      key={item.title}
+                      to={item.href}
+                      onClick={() => setOpen(false)}
+                      className={({ isActive }) =>
+                        `${tile} ${isActive ? "bg-red-600 hover:bg-red-600" : ""}`
+                      }
+                    >
+                      {item.title}
+                    </NavLink>
+                  );
+                })}
+
+                {servicesOpen && (
+                  <div className="col-span-2 grid grid-cols-1 gap-1 rounded-xl bg-white/5 p-2">
+                    {menu
+                      .find((item) => item.submenu)
+                      .submenu.map((sub) => (
                         <NavLink
                           key={sub.title}
                           to={sub.href}
                           onClick={() => setOpen(false)}
                           className={({ isActive }) =>
-                            `block rounded-xl px-4 py-3 text-sm transition ${
+                            `rounded-lg px-3 py-2.5 text-sm transition ${
                               isActive
                                 ? "bg-red-600 text-white"
-                                : "text-slate-200 hover:bg-white/5 hover:text-red-400"
+                                : "text-slate-200 hover:bg-white/10"
                             }`
                           }
                         >
                           {sub.title}
                         </NavLink>
                       ))}
-                    </div>
                   </div>
-                ) : item.section ? (
-                  <button
-                    key={item.title}
-                    onClick={() => {
-                      scrollToSection(item.section);
-                      setOpen(false);
-                    }}
-                    className="text-left font-medium text-white transition hover:text-red-400"
-                  >
-                    {item.title}
-                  </button>
-                ) : (
-                  <NavLink
-                    key={item.title}
-                    to={item.href}
-                    onClick={() => setOpen(false)}
-                    className={({ isActive }) =>
-                      isActive
-                        ? "font-medium text-red-500"
-                        : "font-medium text-white transition hover:text-red-400"
-                    }
-                  >
-                    {item.title}
-                  </NavLink>
-                ),
-              )}
+                )}
+              </div>
 
-              <div className="mt-4 border-t border-white/10 pt-5">
-                <div className="whitespace-nowrap text-lg font-bold leading-none text-white">
-                  +7 (771) 872-10-40
-                </div>
-
-                <div className="mt-1 text-sm text-slate-400">
-                  Пн - пт 10:00–18:00
-                </div>
+              <div className="mt-3 flex items-stretch gap-2 border-t border-white/10 pt-3">
+                <a
+                  href="tel:+77718721040"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/15 px-3 py-3 text-sm font-semibold text-white"
+                >
+                  <PhoneCall size={16} className="text-red-500" />
+                  Позвонить
+                </a>
 
                 <button
                   onClick={() => {
                     scrollToSection("contacts");
                     setOpen(false);
                   }}
-                  className="mt-5 block w-full rounded-xl bg-red-600 py-4 text-center font-semibold text-white transition hover:bg-red-700"
+                  className="flex-1 rounded-xl bg-red-600 px-3 py-3 text-sm font-semibold text-white transition hover:bg-red-700"
                 >
-                  Запись на диагностику
+                  Записаться
                 </button>
               </div>
             </nav>

@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
 import Seo from "../components/Seo";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import ContactSection from "../components/contacts/ContactSection";
 import { brands } from "../data/brands";
+import BrandCard from "../components/brands/BrandCard";
 
 export default function BrandsIndex() {
   return (
@@ -26,18 +24,9 @@ export default function BrandsIndex() {
           стоимости диагностики.
         </p>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {brands.map((brand) => (
-            <Link
-              key={brand.slug}
-              to={`/remont-akpp/${brand.slug}`}
-              className="group flex items-center justify-between rounded-3xl border border-white/10 bg-slate-900/70 p-6 transition hover:border-red-500"
-            >
-              <span className="text-2xl font-black text-white">
-                {brand.brand}
-              </span>
-              <ArrowRight className="h-5 w-5 text-red-500 transition group-hover:translate-x-1" />
-            </Link>
+            <BrandCard key={brand.slug} brand={brand} />
           ))}
         </div>
       </main>
