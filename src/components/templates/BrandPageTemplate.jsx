@@ -40,17 +40,17 @@ export default function BrandPageTemplate({
         </nav>
 
         <div className="text-center">
-          <h1 className="text-5xl font-black text-white">
+          <h1 className="text-center md:text-left text-5xl font-black text-white">
             Ремонт АКПП {brand} в Алматы
           </h1>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300">
+          <p className="text-center md:text-left mx-auto mt-6 max-w-3xl text-lg text-slate-300">
             {heroDescription}
           </p>
         </div>
 
         <div className="mt-16 rounded-3xl border border-white/10 bg-slate-900/70 p-10">
-          <h2 className="text-3xl font-black">
+          <h2 className="text-center md:text-left text-3xl font-black">
             Какие модели {brand} обслуживаем
           </h2>
 
@@ -64,7 +64,7 @@ export default function BrandPageTemplate({
         </div>
 
         <div className="mt-10 rounded-3xl border border-white/10 bg-slate-900/70 p-10">
-          <h2 className="text-3xl font-black">
+          <h2 className="text-center md:text-left text-3xl font-black">
             Частые неисправности АКПП {brand}
           </h2>
 
@@ -76,13 +76,13 @@ export default function BrandPageTemplate({
         </div>
 
         <div className="mt-10 rounded-3xl border border-white/10 bg-slate-900/70 p-10">
-          <h2 className="text-3xl font-black">Диагностика АКПП {brand}</h2>
+          <h2 className="text-center md:text-left text-3xl font-black">Диагностика АКПП {brand}</h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-300">{diagnostics}</p>
+          <p className="text-center md:text-left mt-6 text-lg leading-8 text-slate-300">{diagnostics}</p>
         </div>
 
         <div className="mt-10 rounded-3xl border border-white/10 bg-slate-900/70 p-10">
-          <h2 className="text-3xl font-black">Почему выбирают наш сервис</h2>
+          <h2 className="text-center md:text-left text-3xl font-black">Почему выбирают наш сервис</h2>
 
           <ul className="mt-6 space-y-4 text-lg text-slate-300">
             {advantages.map((item) => (
@@ -92,32 +92,32 @@ export default function BrandPageTemplate({
         </div>
 
         <div className="mt-10 rounded-3xl border border-white/10 bg-slate-900/70 p-10">
-          <h2 className="text-3xl font-black">Часто задаваемые вопросы</h2>
+          <h2 className="text-center md:text-left text-3xl font-black">Часто задаваемые вопросы</h2>
 
           <div className="mt-8 space-y-8">
             <div>
-              <h3 className="font-bold text-xl">
+              <h3 className="text-center md:text-left font-bold text-xl">
                 Сколько стоит ремонт АКПП {brand}?
               </h3>
 
-              <p className="mt-2 text-slate-300">
+              <p className="text-center md:text-left mt-2 text-slate-300">
                 Стоимость зависит от результатов диагностики и характера
                 неисправности.
               </p>
             </div>
 
             <div>
-              <h3 className="font-bold text-xl">Сколько длится ремонт?</h3>
+              <h3 className="text-center md:text-left font-bold text-xl">Сколько длится ремонт?</h3>
 
-              <p className="mt-2 text-slate-300">
+              <p className="text-center md:text-left mt-2 text-slate-300">
                 Обычно от одного до пяти рабочих дней.
               </p>
             </div>
 
             <div>
-              <h3 className="font-bold text-xl">Есть ли гарантия?</h3>
+              <h3 className="text-center md:text-left font-bold text-xl">Есть ли гарантия?</h3>
 
-              <p className="mt-2 text-slate-300">
+              <p className="text-center md:text-left mt-2 text-slate-300">
                 Да. На все выполненные работы предоставляется гарантия.
               </p>
             </div>
@@ -125,7 +125,7 @@ export default function BrandPageTemplate({
         </div>
 
         <div className="mt-10 rounded-3xl border border-white/10 bg-slate-900/70 p-10">
-          <h2 className="text-3xl font-black">Другие услуги</h2>
+          <h2 className="text-center md:text-left text-3xl font-black">Другие услуги</h2>
 
           <div className="mt-6 flex flex-wrap gap-4">
             <Link
@@ -152,7 +152,7 @@ export default function BrandPageTemplate({
         </div>
 
         <div className="mt-10 rounded-3xl bg-orange-500 p-10 text-center text-white">
-          <h2 className="text-4xl font-black">{ctaTitle}</h2>
+          <h2 className="text-center md:text-left text-4xl font-black">{ctaTitle}</h2>
 
           <a
             href="tel:+77718721040"

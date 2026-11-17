@@ -33,11 +33,11 @@ export default function Faq() {
           FAQ
         </span>
 
-        <h2 className="mt-4 text-4xl font-black text-white">
+        <h2 className="text-center md:text-left mt-4 text-4xl font-black text-white">
           Часто задаваемые вопросы
         </h2>
 
-        <p className="mt-4 text-lg text-slate-300">
+        <p className="text-center md:text-left mt-4 text-lg text-slate-300">
           Ответы на популярные вопросы по ремонту АКПП, DSG и вариаторов.
         </p>
       </div>

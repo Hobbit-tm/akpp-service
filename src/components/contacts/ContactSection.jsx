@@ -53,14 +53,14 @@ export default function ContactSection() {
               Контакты
             </span> */}
 
-            <h2 className="mt-6 text-5xl font-black leading-tight text-white">
+            <h2 className="text-center md:text-left mt-6 text-5xl font-black leading-tight text-white">
               Запишитесь
               <br />
               на
               <span className="text-red-500"> диагностику</span>
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-400">
+            <p className="text-center md:text-left mt-6 text-lg leading-8 text-slate-400">
               Проведём диагностику коробки передач, определим причину
               неисправности и предложим оптимальное решение.
             </p>
@@ -119,9 +119,9 @@ export default function ContactSection() {
             id="contacts-form"
             className="rounded-[32px] border border-white/10 bg-slate-900/70 p-10 backdrop-blur-xl"
           >
-            <h3 className="text-3xl font-black text-white">Оставить заявку</h3>
+            <h3 className="text-center md:text-left text-3xl font-black text-white">Оставить заявку</h3>
 
-            <p className="mt-3 text-slate-400">
+            <p className="text-center md:text-left mt-3 text-slate-400">
               Мы свяжемся с вами в ближайшее время.
             </p>
 

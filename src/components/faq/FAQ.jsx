@@ -39,11 +39,11 @@ export default function Faq() {
             Вопросы и ответы
           </span> */}
 
-          <h2 className="mt-6 text-4xl font-black text-white md:text-5xl">
+          <h2 className="text-center md:text-left mt-6 text-4xl font-black text-white md:text-5xl">
             Часто задаваемые вопросы
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-400">
+          <p className="text-center md:text-left mt-6 text-lg leading-8 text-slate-400">
             Ответы на самые популярные вопросы по ремонту автоматических коробок
             передач.
           </p>

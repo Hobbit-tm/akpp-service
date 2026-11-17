@@ -16,7 +16,7 @@ export default function ServicePage({ service }) {
       <Header />
 
       <main className="mx-auto max-w-7xl px-4 pt-32 pb-20">
-        <nav className="mb-8 text-sm text-slate-400">
+        <nav className="mb-8 text-center text-sm text-slate-400 md:text-left">
           <Link to="/" className="hover:text-red-400">
             Главная
           </Link>
@@ -24,15 +24,15 @@ export default function ServicePage({ service }) {
           <span>{h1}</span>
         </nav>
 
-        <h1 className="text-4xl font-black text-white md:text-6xl">{h1}</h1>
+        <h1 className="text-center md:text-left text-4xl font-black text-white md:text-6xl">{h1}</h1>
 
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+        <p className="text-center md:text-left mt-6 max-w-3xl text-lg leading-8 text-slate-300">
           {lead}
         </p>
 
         <div className="mt-14 grid gap-8 lg:grid-cols-2">
           <section className="rounded-[32px] border border-white/10 bg-slate-900/70 p-8">
-            <h2 className="text-2xl font-black text-white">Что входит</h2>
+            <h2 className="text-center md:text-left text-2xl font-black text-white">Что входит</h2>
             <ul className="mt-6 space-y-4">
               {includes.map((item) => (
                 <li key={item} className="flex gap-3 text-slate-300">
@@ -44,7 +44,7 @@ export default function ServicePage({ service }) {
           </section>
 
           <section className="rounded-[32px] border border-white/10 bg-slate-900/70 p-8">
-            <h2 className="text-2xl font-black text-white">
+            <h2 className="text-center md:text-left text-2xl font-black text-white">
               Признаки, что нужна помощь
             </h2>
             <ul className="mt-6 space-y-4">
@@ -58,7 +58,7 @@ export default function ServicePage({ service }) {
           </section>
         </div>
 
-        <p className="mt-10 max-w-3xl text-lg leading-8 text-slate-400">
+        <p className="text-center md:text-left mt-10 max-w-3xl text-lg leading-8 text-slate-400">
           {timing}
         </p>
 

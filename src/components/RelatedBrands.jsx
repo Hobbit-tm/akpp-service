@@ -6,7 +6,7 @@ export default function RelatedBrands({ currentBrand }) {
 
   return (
     <section className="mt-16">
-      <h2 className="mb-8 text-3xl font-black text-white">
+      <h2 className="text-center md:text-left mb-8 text-3xl font-black text-white">
         Ремонт АКПП других марок
       </h2>
 

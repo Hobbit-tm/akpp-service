@@ -16,10 +16,10 @@ export default function BrandsIndex() {
       <Header />
 
       <main className="mx-auto max-w-7xl px-4 pt-32 pb-20">
-        <h1 className="text-4xl font-black text-white md:text-6xl">
+        <h1 className="text-center md:text-left text-4xl font-black text-white md:text-6xl">
           Ремонт АКПП по маркам
         </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+        <p className="text-center md:text-left mt-6 max-w-3xl text-lg leading-8 text-slate-300">
           Выберите свою марку, чтобы узнать о типичных неисправностях и
           стоимости диагностики.
         </p>

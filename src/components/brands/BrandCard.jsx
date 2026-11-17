@@ -9,13 +9,13 @@ export default function BrandCard({ brand }) {
       className="group flex h-full flex-col rounded-3xl border border-white/10 bg-slate-900/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-red-500/50"
     >
       <div className="flex items-center justify-between">
-        <h3 className="text-2xl font-black text-white">{brand.brand}</h3>
+        <h3 className="text-center md:text-left text-2xl font-black text-white">{brand.brand}</h3>
         <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500/10 text-red-500 transition group-hover:bg-red-600 group-hover:text-white">
           <ArrowRight className="h-5 w-5 transition group-hover:translate-x-0.5" />
         </span>
       </div>
 
-      <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-400">
+      <p className="text-center md:text-left mt-3 line-clamp-2 text-sm leading-6 text-slate-400">
         Ремонт АКПП {brand.brand} в Алматы
       </p>
 
