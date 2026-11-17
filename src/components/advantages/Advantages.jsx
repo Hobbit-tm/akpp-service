@@ -65,11 +65,11 @@ export default function Advantages() {
             Наши преимущества
           </span> */}
 
-          <h2 className="mt-6 text-4xl font-black text-white md:text-5xl">
+          <h2 className="text-center mt-6 text-4xl font-black text-white md:text-5xl">
             Почему нам доверяют
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-400">
+          <p className="text-center mt-6 text-lg leading-8 text-slate-400">
             Более 15 лет мы профессионально ремонтируем автоматические коробки
             передач. Работаем честно, используем современное оборудование и
             предоставляем официальную гарантию.

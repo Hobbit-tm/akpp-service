@@ -18,11 +18,11 @@ export default function Prices() {
             Прозрачные цены
           </span> */}
 
-          <h2 className="mt-6 text-4xl font-black text-white md:text-5xl">
+          <h2 className="text-center mt-6 text-4xl font-black text-white md:text-5xl">
             Стоимость популярных услуг
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-400">
+          <p className="text-center mt-6 text-lg leading-8 text-slate-400">
             Финальная стоимость зависит от модели автомобиля и состояния коробки
             передач. После диагностики цена не меняется.
           </p>
@@ -57,12 +57,12 @@ export default function Prices() {
               <div className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-red-600 transition-transform duration-300 group-hover:scale-x-100" />
 
               {/* Иконка */}
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 transition-all duration-300 group-hover:bg-red-600">
+              <div className="mx-auto md:mx-0 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 transition-all duration-300 group-hover:bg-red-600">
                 <CheckCircle2 className="h-6 w-6 text-red-500 transition-all duration-300 group-hover:text-white" />
               </div>
 
               {/* Название */}
-              <h3 className="mt-7 text-2xl font-bold text-white">
+              <h3 className="text-center md:text-left mt-7 text-2xl font-bold text-white">
                 {item.name}
               </h3>
 
@@ -75,7 +75,7 @@ export default function Prices() {
               <div className="my-6 h-px bg-white/10" />
 
               {/* Описание */}
-              <p className="flex-1 leading-8 text-slate-400">
+              <p className="text-center md:text-left flex-1 leading-8 text-slate-400">
                 Стоимость включает консультацию специалиста и рекомендации по
                 дальнейшему обслуживанию.
               </p>

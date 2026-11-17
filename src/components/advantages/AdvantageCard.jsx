@@ -30,15 +30,15 @@ export default function AdvantageCard({ icon, title, description }) {
       </div>
 
       {/* Иконка */}
-      <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/15 transition group-hover:bg-red-500">
+      <div className="relative mx-auto md:mx-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/15 transition group-hover:bg-red-500">
         <Icon className="h-8 w-8 text-red-500 transition group-hover:text-white" />
       </div>
 
       {/* Заголовок */}
-      <h3 className="relative mt-6 text-xl font-bold text-white">{title}</h3>
+      <h3 className="text-center md:text-left relative mt-6 text-xl font-bold text-white">{title}</h3>
 
       {/* Описание */}
-      <p className="relative mt-3 leading-7 text-slate-400">{description}</p>
+      <p className="text-center md:text-left relative mt-3 leading-7 text-slate-400">{description}</p>
     </div>
   );
 }

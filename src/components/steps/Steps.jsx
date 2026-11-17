@@ -11,11 +11,11 @@ export default function Steps() {
       <div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
         {/* Заголовок */}
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-4xl font-black text-white md:text-5xl">
+          <h2 className="text-center text-4xl font-black text-white md:text-5xl">
             Как проходит ремонт АКПП
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-400">
+          <p className="text-center mt-6 text-lg leading-8 text-slate-400">
             Весь процесс ремонта полностью прозрачен. Каждый этап
             согласовывается с владельцем автомобиля до начала работ.
           </p>
@@ -45,22 +45,22 @@ export default function Steps() {
               "
             >
               {/* Номер */}
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-red-600 text-2xl font-black text-white">
+              <div className="mx-auto md:mx-0 flex h-16 w-16 items-center justify-center rounded-full bg-red-600 text-2xl font-black text-white">
                 {index + 1}
               </div>
 
               {/* Заголовок */}
-              <h3 className="mt-8 text-2xl font-bold text-white">
+              <h3 className="text-center md:text-left mt-8 text-2xl font-bold text-white">
                 {step.title}
               </h3>
 
               {/* Текст */}
-              <p className="mt-5 text-lg leading-8 text-slate-400">
+              <p className="text-center md:text-left mt-5 text-lg leading-8 text-slate-400">
                 {step.text}
               </p>
 
               {/* Стрелка */}
-              <div className="mt-auto pt-10">
+              <div className="mt-auto flex justify-center pt-10 md:justify-start">
                 <ArrowRight className="h-6 w-6 text-red-500 transition-all duration-300 group-hover:translate-x-2" />
               </div>
             </div>

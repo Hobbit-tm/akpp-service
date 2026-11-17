@@ -22,15 +22,15 @@ export default function SeoContent({ data }) {
                 key={item.title}
                 className="group rounded-[32px] border border-white/10 bg-slate-900/70 p-8 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-red-500/40"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-red-600">
+                <div className="mx-auto md:mx-0 flex h-14 w-14 items-center justify-center rounded-full bg-red-600">
                   <CheckCircle2 className="h-7 w-7 text-white" />
                 </div>
 
-                <h3 className="mt-8 text-2xl font-black text-white">
+                <h3 className="text-center md:text-left mt-8 text-2xl font-black text-white">
                   {item.title}
                 </h3>
 
-                <p className="mt-5 leading-8 text-slate-300">{item.text}</p>
+                <p className="text-center md:text-left mt-5 leading-8 text-slate-300">{item.text}</p>
               </div>
             ))}
           </div>
@@ -39,7 +39,7 @@ export default function SeoContent({ data }) {
         {/* SEO-текст */}
         {data.seoContent && (
           <div className="mt-16 rounded-[32px] border border-white/10 bg-slate-900/70 p-10 shadow-2xl backdrop-blur-xl">
-            <h2 className="text-3xl font-black text-white">
+            <h2 className="text-center text-3xl font-black text-white">
               {data.seoContent.title}
             </h2>
 
