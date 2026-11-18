@@ -44,4 +44,14 @@ ${sitemapUrls
 `;
 
 fs.writeFileSync(path.join(distDir, "sitemap.xml"), sitemap);
+
+// Страница 404: отдаём настоящий 404-ответ вместо подмены главной.
+{
+  const { html, head } = render("/__not-found");
+  const page = template
+    .replace('<div id="root"></div>', `<div id="root">${html}</div>`)
+    .replace("</head>", `${head}\n  </head>`);
+  fs.writeFileSync(path.join(distDir, "404.html"), page);
+  console.log("prerendered 404.html");
+}
 console.log(`sitemap.xml: ${sitemapUrls.length} urls`);

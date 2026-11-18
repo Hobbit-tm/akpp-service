@@ -4,7 +4,7 @@ export default function Seo({
   title,
   description,
   keywords,
-  image = "/og-image.jpg",
+  image = "https://remont-akpp.kz/og-image.jpg",
   url = "",
   schema,
 }) {

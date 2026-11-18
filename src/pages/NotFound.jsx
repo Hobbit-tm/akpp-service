@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-slate-950 text-white px-6">
-      <h1 className="text-6xl font-bold text-red-500">404</h1>
+    <div className="flex min-h-screen flex-col items-center justify-center bg-slate-950 px-6 text-center text-white">
+      <Helmet>
+        <title>Страница не найдена — REMONTAKPP</title>
+        <meta name="description" content="Такой страницы нет. Вернитесь на главную, чтобы узнать о ремонте АКПП в Алматы." />
+        <meta name="robots" content="noindex" />
+      </Helmet>
 
-      <p className="mt-4 text-xl">Страница не найдена</p>
+      <h1 className="text-7xl font-black text-red-500">404</h1>
+
+      <p className="mt-4 text-xl text-slate-300">Страница не найдена</p>
 
       <Link
         to="/"
