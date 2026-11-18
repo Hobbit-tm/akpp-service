@@ -1,26 +1,30 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-// Единая карточка бренда: используется в списке марок и в блоке "других марок".
+// Единая карточка бренда: список марок и блок "других марок".
+// На телефоне всё по центру, с md и выше выравнивание слева.
 export default function BrandCard({ brand }) {
   return (
     <Link
       to={`/remont-akpp/${brand.slug}`}
-      className="group flex h-full flex-col rounded-3xl border border-white/10 bg-slate-900/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-red-500/50"
+      className="group relative flex h-full flex-col items-center overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900 to-slate-950 p-7 text-center transition duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_20px_50px_-20px_rgba(239,68,68,0.35)] md:items-start md:text-left"
     >
-      <div className="flex items-center justify-between">
-        <h3 className="text-center md:text-left text-2xl font-black text-white">{brand.brand}</h3>
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500/10 text-red-500 transition group-hover:bg-red-600 group-hover:text-white">
-          <ArrowRight className="h-5 w-5 transition group-hover:translate-x-0.5" />
-        </span>
+      {/* Красное свечение в углу */}
+      <div className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-red-600/10 blur-2xl transition duration-500 group-hover:bg-red-600/25" />
+
+      {/* Монограмма марки */}
+      <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-red-500 to-red-700 text-2xl font-black text-white shadow-lg shadow-red-600/25 transition duration-300 group-hover:scale-105">
+        {brand.brand.charAt(0)}
       </div>
 
-      <p className="text-center md:text-left mt-3 line-clamp-2 text-sm leading-6 text-slate-400">
-        Ремонт АКПП {brand.brand} в Алматы
+      <h3 className="mt-5 text-2xl font-black text-white">{brand.brand}</h3>
+
+      <p className="mt-2 text-sm leading-6 text-slate-400">
+        Ремонт АКПП в Алматы
       </p>
 
       {brand.models?.length > 0 && (
-        <div className="mt-auto flex flex-wrap gap-2 pt-5">
+        <div className="mt-5 flex flex-wrap justify-center gap-2 md:justify-start">
           {brand.models.slice(0, 3).map((model) => (
             <span
               key={model}
@@ -31,6 +35,11 @@ export default function BrandCard({ brand }) {
           ))}
         </div>
       )}
+
+      <span className="mt-auto flex items-center gap-2 pt-6 text-sm font-semibold text-red-500 transition group-hover:text-red-400">
+        Смотреть ремонт
+        <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+      </span>
     </Link>
   );
 }
